@@ -1,0 +1,52 @@
+➜  reactjs cd git-test 
+➜  git-test git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /Users/prathamkumar/Documents/Development/WEB-Work/JAVA_SCRIPT/reactjs/git-test/.git/
+➜  git-test git:(master) ✗ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  git-test git:(master) ✗ git add .
+➜  git-test git:(master) ✗ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+➜  git-test git:(master) ✗ git commit
+hint: Waiting for your editor to close the file... 
+
+ Session contents restored from 05/05/2022 at 23:58:46 
+
+➜  git-test git:(master) ✗ git commit -m "first commit"
+[master (root-commit) b2984a3] first commit
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+➜  git-test git:(master) git status
+On branch master
+nothing to commit, working tree clean
+➜  git-test git:(master) git log
+
+
+ Session contents restored from 06/05/2022 at 00:00:15 
+
+➜  git-test git:(master) git log --oneline
+➜  git-test git:(master) 
