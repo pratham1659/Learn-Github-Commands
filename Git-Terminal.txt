@@ -49,4 +49,70 @@ nothing to commit, working tree clean
  Session contents restored from 06/05/2022 at 00:00:15 
 
 ➜  git-test git:(master) git log --oneline
-➜  git-test git:(master) 
+➜  git-test git:(master) git status 
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git-Terminal.txt
+        Templates/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  git-test git:(master) ✗ git add .
+➜  git-test git:(master) ✗ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Git-Terminal.txt
+        new file:   Templates/test.html
+        modified:   index.html
+
+➜  git-test git:(master) ✗ git commit -m "second commit"
+[master c171070] second commit
+ 3 files changed, 66 insertions(+)
+ create mode 100644 Git-Terminal.txt
+ create mode 100644 Templates/test.html
+➜  git-test git:(master) git log
+➜  git-test git:(master) ✗ git add .
+➜  git-test git:(master) ✗ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Templates/test.html
+
+➜  git-test git:(master) ✗ git commit -m "third commit"
+[master 50baaab] third commit
+ 1 file changed, 1 insertion(+)
+➜  git-test git:(master) git log
+➜  git-test git:(master) git log --oneline
+➜  git-test git:(master) git checkout c171070 index.html
+Updated 0 paths from a1ad7b8
+➜  git-test git:(master) git log --oneline              
+➜  git-test git:(master) git checkout b2984a3 index.html
+Updated 1 path from 171daa2
+➜  git-test git:(master) ✗ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+➜  git-test git:(master) ✗ git reset HEAD index.html
+Unstaged changes after reset:
+M       index.html
+➜  git-test git:(master) ✗ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  git-test git:(master) ✗ git checkout -- index.html
+➜  git-test git:(master) git reset
+Unstaged changes after reset:
+M       Git-Terminal.txt
+➜  git-test git:(master) ✗ 
